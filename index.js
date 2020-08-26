@@ -44,15 +44,16 @@ function createTimeInEvent(employee, dateStamp) {
 //     * `hour`: Derived from the argument
 //     * `date`: Derived from the argument
 
-function createTimeOutEvent(employee, dateStamp) {
-  let [date, hour] = dateStamp.split(" ");
+let createTimeOutEvent = function(employee, dateStamp){
+    let [date, hour] = dateStamp.split(' ')
 
-  employee.timeInEvents.push({
-    type: "TimeOut",
-    hour: parseInt(hour, 10),
-    date,
-  });
-  return employee;
+    employee.timeOutEvents.push({
+        type: "TimeOut",
+        hour: parseInt(hour, 10),
+        date,
+    })
+
+    return employee
 }
 
 // * **Argument(s)**
