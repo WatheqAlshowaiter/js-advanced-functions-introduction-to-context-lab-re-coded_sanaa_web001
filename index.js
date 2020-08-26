@@ -90,9 +90,10 @@ function hoursWorkedOnDate(employee, dateOfDiff) {
 //   * Using `hoursWorkedOnDate`, multiply the hours by the record's
 //     payRate to determine amount owed. Amount should be returned as a number.
 
-function wagesEarnedOnDate(employee, dateOfDiff) {
-  let hourseWorked = hoursWorkedOnDate(employee, dateOfDiff);
-  return (hourseWorked * employee.payPerHour).toString();
+let wagesEarnedOnDate = function(employee, dateSought){
+    let rawWage = hoursWorkedOnDate(employee, dateSought)
+        * employee.payPerHour
+    return parseFloat(rawWage.toString())
 }
 
 // test
