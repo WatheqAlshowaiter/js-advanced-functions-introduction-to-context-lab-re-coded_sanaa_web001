@@ -142,5 +142,5 @@ function calculatePayroll(arrayOfEmployees) {
 //   * Test the `firstName` field for a match with the `firstName` argument
 
 function findEmployeeByFirstName(srcArray, firstName) {
-  return srcArray.find((e) => e === firstName);
+  return srcArray.find((e) => e.firstName === firstName);
 }
